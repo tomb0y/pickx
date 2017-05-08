@@ -18,11 +18,12 @@ defmodule Pickx.Mixfile do
   end
 
   def application do
-    [extra_applications: [:logger]]
+    [extra_applications: [:logger, :httpoison]]
   end
 
   defp deps do
     [
+      {:httpoison, "~> 0.11.1"},
       {:dogma, "~> 0.1", only: [:dev, :test]}
     ]
   end
